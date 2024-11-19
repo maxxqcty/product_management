@@ -1,0 +1,58 @@
+body {
+    background: linear-gradient(to right, #ff7eb9, #ff65a3);
+    /* Vibrant pink background */
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.card-header {
+    background-color: #ff4081;
+    color: white;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.input-group-text {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+}
+
+.btn-custom {
+    background-color: #ff4081;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.btn-custom:hover {
+    background-color: #ff65a3;
+}
+
+.link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link a {
+    color: #ff4081;
+    text-decoration: none;
+}
+
+.link a:hover {
+    color: #ff65a3;
+}

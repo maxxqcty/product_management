@@ -1,0 +1,88 @@
+body {
+    background-image: url(../assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Vibrant pink gradient background */
+    color: black;
+}
+
+.container {
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-side {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    color: #333;
+    width: 45%;
+    /* Left side for login form */
+}
+
+.right-side {
+    padding: 40px;
+    width: 45%;
+    /* Right side for welcome message */
+}
+
+.right-side .welcome-message {
+    text-align: center;
+}
+
+.card-header {
+    background-color: #ff4081;
+    color: white;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.btn-custom {
+    background-color: #ff4081;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.btn-custom:hover {
+    background-color: #ff65a3;
+}
+
+.link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link a {
+    color: #ff4081;
+    text-decoration: none;
+}
+
+.link a:hover {
+    color: #ff65a3;
+}
+
+.welcome-message h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome-message p {
+    font-size: 1.25rem;
+}
+
+.footer {
+    font-size: 0.875rem;
+    color: #ddd;
+    margin-top: 20px;
+    text-align: center;
+}
