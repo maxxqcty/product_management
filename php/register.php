@@ -107,7 +107,7 @@ $conn->close();
                     <button type="submit" class="btn btn-custom">Register</button>
                 </form>
                 <div class="link mt-3">
-                    <p style="color: black;">Already have an account? <a href="index.php">Login here</a></p>
+                    <p style="color: black;">Already have an account? <a href="../index.php">Login here</a></p>
                 </div>
             </div>
         </div>

@@ -15,6 +15,8 @@ include_once 'Product.php';
 
     <!-- Custom CSS for Pink Palette and Vibrant Background -->
     <link rel="stylesheet" href="../styles/welcome.css">
+    </a>
+
 </head>
 
 <body>
@@ -28,7 +30,7 @@ include_once 'Product.php';
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.php">Home</a>
+                        <a class="nav-link active" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="create_product.php">Create New Product</a>
@@ -36,6 +38,7 @@ include_once 'Product.php';
                     <li class="nav-item">
                         <a class="nav-link" href="read_products.php">View All Products</a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -43,8 +46,8 @@ include_once 'Product.php';
 
     <!-- Main Content -->
     <div class="container text-center">
-        <h1>Welcome to the Product Management System</h1>
-        <p class="lead">Manage your products easily with the options below.</p>
+        <h1>Welcome to Our Shop!</h1>
+        <p class="lead" styles="font-family: Arial;">Your one-stop destination for the best products, unbeatable prices, and an unforgettable shopping experience!</p>
 
 
         <ul class="list-group">
@@ -53,6 +56,9 @@ include_once 'Product.php';
             </li>
             <li class="list-group-item">
                 <a href="read_products.php" class="btn btn-info w-100">View All Products</a>
+            </li>
+            <li class="list-group-item">
+                <a href="../index.php" class="logout btn-info w-100">Log out</a>
             </li>
         </ul>
     </div>

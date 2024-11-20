@@ -1,10 +1,13 @@
 body {
-    background: linear-gradient(to right, #ff7eb9, #ff65a3);
-    color: #fff;
+    background-image: url(../assets/gold.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
 }
 
+
 .navbar {
-    background-color: #ff4081;
+    background-color: #ff40803a;
     /* Pink color for navbar */
 }
 
@@ -23,6 +26,13 @@ body {
     /* Pink buttons */
     border-color: #ff4081;
 }
+
+.logout {
+    background-color: #f80000;
+    /* Pink buttons */
+    border-color: #ff4081;
+}
+
 
 .btn-primary:hover {
     background-color: #ff80ab;

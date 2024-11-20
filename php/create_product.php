@@ -8,8 +8,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $price = $_POST['price'];
     $supplier = $_POST['supplier'];
 
+    // Handle the uploaded image
+    $image = null;
+    if (isset($_FILES['image']['tmp_name']) && $_FILES['image']['tmp_name'] != '') {
+        $image = file_get_contents($_FILES['image']['tmp_name']);
+    }
+
     $product = new Product();
-    if ($product->create($product_name, $category, $quantity, $price, $supplier)) {
+    if ($product->create($product_name, $category, $quantity, $price, $supplier, $image)) {
         echo "<div class='alert alert-success' role='alert'>Product created successfully!</div>";
     } else {
         echo "<div class='alert alert-danger' role='alert'>Failed to create product.</div>";
@@ -36,14 +42,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Product Management</a>
+            <a class="navbar-brand" href="welcome.php">Product Management</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.php">Home</a>
+                        <a class="nav-link active" href="welcome.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="create_product.php">Create New Product</a>
@@ -60,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h2 class="text-center mb-4">Create New Product</h2>
 
         <!-- Product Creation Form -->
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="product_name" class="form-label">Product Name</label>
                 <div class="input-group">
@@ -94,6 +100,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-person"></i></span>
                     <input type="text" class="form-control" id="supplier" name="supplier" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Product Image</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-image"></i></span>
+                    <input type="file" class="form-control" id="image" name="image" accept="image/*">
                 </div>
             </div>
             <div class="d-grid">

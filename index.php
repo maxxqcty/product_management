@@ -92,8 +92,9 @@ $conn->close();
             <!-- Right Side: Welcome Message -->
             <div class="right-side">
                 <div class="welcome-message">
-                    <h1>Welcome to the System</h1>
-                    <p>This system was created by <strong>Your Name</strong></p>
+                    <h1>Welcome to Our Shop!<h1>
+                        
+                    <p>Your one-stop destination for the best products, unbeatable prices, and an unforgettable shopping experience!</p>
                     <p>Enjoy exploring and managing the products!</p>
                 </div>
             </div>
