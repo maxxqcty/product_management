@@ -19,6 +19,25 @@ $products = $product->read();
     <!-- Custom Styling for Background and Table -->
     <link rel="stylesheet" href="../styles/read.css">
     <style>
+        body {
+            background-color: #f8f0f6;
+            /* Light pink background */
+        }
+
+        .navbar {
+            background-color: #e91e63;
+            /* Dark pink navbar */
+        }
+
+        .navbar a {
+            color: white;
+        }
+
+        .navbar a:hover {
+            color: #ffc107;
+            /* Yellow on hover */
+        }
+
         .table-container {
             margin-top: 20px;
         }
@@ -40,17 +59,39 @@ $products = $product->read();
 
         .navbar-nav .nav-link.active {
             font-weight: bold;
+            color: #ffc107;
+            /* Highlight active link with yellow */
         }
 
         .btn {
             padding: 0.4rem 1rem;
+        }
+
+        .btn-outline-primary {
+            color: #e91e63;
+            border-color: #e91e63;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #e91e63;
+            color: white;
+        }
+
+        .btn-outline-danger {
+            color: #d32f2f;
+            border-color: #d32f2f;
+        }
+
+        .btn-outline-danger:hover {
+            background-color: #d32f2f;
+            color: white;
         }
     </style>
 </head>
 
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Product Management</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,11 +114,11 @@ $products = $product->read();
     </nav>
 
     <div class="container table-container">
-        <h2 class="text-center mb-4">All Products</h2>
+        <h2 class="text-center mb-4" style="color: #e91e63;">All Products</h2>
 
         <!-- Products Table -->
         <table class="table table-striped table-bordered table-hover">
-            <thead class="table-dark">
+            <thead class="table-dark" style="background-color: #e91e63;">
                 <tr>
                     <th>Product Picture</th>
                     <th>Product Name</th>

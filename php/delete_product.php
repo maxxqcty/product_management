@@ -5,9 +5,8 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $product = new Product();
     if ($product->delete($id)) {
-        echo "Product deleted successfully!";
+        header("Location: read_products.php"); // Replace with the desired page
     } else {
         echo "Failed to delete product.";
     }
 }
-?>
